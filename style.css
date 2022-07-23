@@ -19,28 +19,44 @@ p{
     position:sticky;
     top:0;
     z-index: 1;
+    transition: background-color 0.3s ease-in;
+}
+.icon-label{
+    width: 20px;
 }
 .nav-item{
     color:white;
     padding: 15px;
+    padding-left: 30px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in;
 }
 .nav-item:hover{
     color: black;
     background-color:#78e08f;
+    
     
 }
 .nav-label{
     justify-self: flex-start;
     margin-right: auto;
     margin-left: 2%;
+}
+.nav-label a{
     color: #eb2f06;
+    text-decoration: none;
+    
+}
+.nav-label a:hover{
+    color: #78e08f;
+    
 }
 
 .brand{
     height:60vh;
     background-image: url('./ressources/present-img.jpg');
     background-size: cover;
+    background-position: center;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -49,7 +65,13 @@ p{
 h1{
     margin-bottom: 200px;
     font-size: 8rem;
+}
+h1 a{
     color: #78e08f;
+    text-decoration: none;
+}
+h1 a:hover{
+    color: #eb2f06;
 }
 .container{
     background: white;
@@ -69,15 +91,43 @@ h1{
     width: 80%;
     height:300px;
     background-image: url('ressources/art1.jpg');
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
     box-shadow: 5px 5px 15px black;
+    transition: all 0.3s ease-in-out;
 }
+/* 
+@keyframes goLeft {
+    from{
+        width: 100%;
+    }
+    to{
+        width:0;
+    }
+}
+@keyframes goRight {
+    from{
+        margin-right: 0;
+    }
+    to{
+        margin-right: 300%;
+    }
+}
+.animateLeft{
+    position:relative;
+    animation: 2s ease-in forwards goLeft;
+}
+.animateRight{
+    position:relative;
+    animation: 2s ease-in forwards  goRight; 
+} */
 .article:hover{
     box-shadow: 5px 5px 25px black;
+    transition: all 0.3s ease-in-out;
 }
 .btn{
     margin: auto;
@@ -89,9 +139,13 @@ h1{
     background-color: rgba(0,0,0,0.7);
     box-shadow: 5px 5px 15px black;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 .btn:hover{
+    transition: all 0.3s ease-in-out;
     transform: scale(1.1);
+    color: #eb2f06;
+    border: 3px solid #eb2f06;
 }
 .art-content{
     width: 40%;
@@ -103,15 +157,51 @@ h1{
 }
 #art2{
     background-image: url('ressources/art2.jpg');
+    background-position: center;
     background-size: cover;
 }
 #art3{
     background-image: url('ressources/art3.jpg');
     background-size:cover;
+    background-position: center;
 }
 #art4{
     background-image: url('ressources/art4.jpg');
     background-size: cover;
+    background-position: center;
+}
+
+#contact{
+    width:80%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+    background-image: url('./ressources/art4.jpg');
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #78e08f;
+    box-shadow: 5px 5px 15px black;
+}
+#contact:hover{
+    box-shadow: 5px 5px 25px black;
+}
+#contact label{
+    padding-top: 30px;
+}
+#contact textarea{
+    margin-bottom: 30px;
+    width:80%;
+    height:200px;
+    resize: none;
+}
+#contact input{
+    width:40%;
+    height: 30px;
+}
+#contact input, textarea, .btn{
+    box-shadow: 5px 5px 15px black;;
 }
 footer{
     background-color: white;
