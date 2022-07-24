@@ -5,9 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Dosis:wght@200;300&family=Lobster&family=Major+Mono+Display&family=Mea+Culpa&family=Montserrat:wght@600&display=swap');
+        </style>
     <title>Galerie</title>
 </head>
 <body>
-    
+    <nav class="menu">
+        <div class="nav-label"><a href="./index.html">STREET FOUNDATION</a></div>
+        <div class="nav-item">Les actus</div>
+        <div class="nav-item">Nos membres</div>
+        <a href="./galerie.html"><div class="nav-item" id="galerie-btn">Galerie</div></a>
+        <a href="./calendrier.html"><div class="nav-item">Calendrier</div></a>
+        <div class="nav-item" id="contact-btn">Contact</div>
+    </nav>
+
+    <header>
+        <div class="brand">
+            <h1><a href="./index.html">STREET FOUNDATION</a></h1>
+        </div>
+    </header>
+
+    <main class="pic-container">
+        
+        <article id="contact">
+            <label for="name">Votre nom</label>
+            <input type="text" placeholder="Votre nom" name="name">
+            <label for="mail">Email</label>
+            <input type="mail" placeholder="Example@mail.com" name="mail">
+            <label for="msg">Votre message</label>
+            <textarea name="msg" id="" cols="150" rows="30"></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </article>
+
+        
+        <h2>GALERIE</h2>
+        
+        <div class="col1">
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img1_mini.jpg" alt="" class="pic" id="test_id">
+            </div>
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img2_mini.jpg" alt="" class="pic">
+            </div>
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img3_mini.jpg" alt="" class="pic">
+            </div>
+        </div>
+       
+        <div class="col2">
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img4_mini.jpg" alt="" class="pic">
+            </div>
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img5_mini.jpg" alt="" class="pic">
+            </div>
+        </div>
+        
+        <div class="col3">
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img7_mini.jpg" alt="" class="pic">
+            </div>
+            <article class="pic-article">
+                <h2>Vous aimez ?</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, quisquam ad incidunt sit voluptatibus quae unde, excepturi quos molestias earum quam et amet! Eveniet aliquam dolor molestiae nam quam error!</p>
+                <button class="btn btn-pic">En savoir +</button>
+            </article>        
+            <div class="pic-item">
+                <img src="./ressources/galerie_image/mini/img6_mini.jpg" alt="" class="pic">
+            </div>
+        </div>
+        
+        
+
+    </main>
+
+
+    <footer>
+        <div class="reseaux">
+            <img src="./ressources/facebook-2020-2-1.svg" alt="" class="icon-reseau">
+            <img src="./ressources/twitter-6.svg" alt="" class="icon-reseau">
+            <img src="./ressources/pinterest-1.svg" alt="" class="icon-reseau">
+        </div>
+        <p>Copyright 2022 Buckito Industry</p>
+        <p>Tous droits réservés</p>
+        <ul>
+            <li>Plan du site</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+            <li>Plan du site</li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
