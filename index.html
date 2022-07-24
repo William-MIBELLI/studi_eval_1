@@ -13,11 +13,11 @@
 <body>
     <nav class="menu">
         <div class="nav-label"><a href="./index.html">STREET FOUNDATION</a></div>
-        <div class="nav-item">Les actus</div>
-        <div class="nav-item">Nos membres</div>
+        <div class="nav-item chantier">Les actus</div>
+        <div class="nav-item chantier">Nos membres</div>
         <a href="./galerie.html"><div class="nav-item" id="galerie-btn">Galerie</div></a>
         <a href="./calendrier.html"><div class="nav-item">Calendrier</div></a>
-        <div class="nav-item" id="contact-btn">Contact</div>
+        <a href="./contact.html"><div class="nav-item">Contact</div></a>
     </nav>
 
     <header>
@@ -28,45 +28,42 @@
 
 
     <main class="container">
-        <article class="article" id="art1">
-            <button class="btn">Let's GO !</button>
-            <div class="art-content">
-                <h3>Représenter nos Artistes</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore deserunt, aliquam eos soluta cum explicabo dignissimos ipsum tempore non quis, expedita fuga rem repellat aliquid tempora omnis asperiores harum veniam?</p>
-            </div>
-        </article>
-        <article class="article" id="art2">
-            <div class="art-content">
-                <h3>La culture pour tous</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore deserunt, aliquam eos soluta cum explicabo dignissimos ipsum tempore non quis, expedita fuga rem repellat aliquid tempora omnis asperiores harum veniam?</p>
-            </div>
-            <button class="btn">Let's GO !</button>
-        </article>
-        <article class="article" id="art3">
-            <button class="btn">Let's GO !</button>
-            <div class="art-content">
-                <h3>Envie d'essayer ?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore deserunt, aliquam eos soluta cum explicabo dignissimos ipsum tempore non quis, expedita fuga rem repellat aliquid tempora omnis asperiores harum veniam?</p>
-            </div>
-        </article>
-        <article class="article" id="art4">
-            <div class="art-content">
-                <h3>Street event 2022</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore deserunt, aliquam eos soluta cum explicabo dignissimos ipsum tempore non quis, expedita fuga rem repellat aliquid tempora omnis asperiores harum veniam?</p>
-            </div>
-            <button class="btn">Let's GO !</button>
-        </article>
-
-        <article id="contact">
-            <label for="name">Votre nom</label>
-            <input type="text" placeholder="Votre nom" name="name">
-            <label for="mail">Email</label>
-            <input type="mail" placeholder="Example@mail.com" name="mail">
-            <label for="msg">Votre message</label>
-            <textarea name="msg" id="" cols="150" rows="30"></textarea>
-            <button type="submit" class="btn">Envoyer</button>
-        </article>
         
+       
+        <div class="container-event">
+            <div class="col1">
+                <div class="event-txt">
+                    <h3>Bienvenue</h3>
+                    <p>Street Foundation est un regroupement d'artistes, de militants, de passionnés autour d'un domaine: 
+                        le street art !
+                        Nos membres font vivre l'association autour de nombreux cours
+                    </p>
+                    <a href="./contact.html"><button class="btn btn-event">Rejoins nous !</button></a>
+                </div>
+                <img src="./ressources/galerie_image/img4.jpg" alt="" class="img-p">
+            </div>
+            <div class="col2">
+                <div class="event-img-div">
+                 <img src="./ressources/event-img.jpg" alt="" class="event-img">
+                </div>
+                <div class="event-txt txt2">
+                    <h3>Rencontre nous !</h3>
+                    <p>Quoi de mieux que de se rendre à un festival de 
+                        street art pour y explorer cette forme d’art urbain ? Le street art
+                        étant par nature éparpillé un peu partout, il est généralement difficile
+                         de retrouver plusieurs œuvres dans un même lieu, comme dans une galerie. 
+                         Heureusement, les festivals sont là pour résoudre ce problème, en transformant
+                          les villes en une exposition à grande échelle ! </p>
+                          <p>Découvrez cet art dynamique et 
+                          impressionnant en explorant les 
+                        meilleurs festivals de street art du monde entier avec Artsper.</p>
+                        <a href="./contact.html"><button class="btn btn-event">Calendrier</button></a>
+                </div>
+
+            </div>
+        </div>
+
+    
     </main>
 
 
@@ -78,7 +75,7 @@
         </div>
         <p>Copyright 2022 Buckito Industry</p>
         <p>Tous droits réservés</p>
-        <ul>
+        <ul class="footer-link">
             <li>Plan du site</li>
             <li>Mentions légales</li>
             <li>Contact</li>
