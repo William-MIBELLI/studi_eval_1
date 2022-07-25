@@ -325,7 +325,6 @@ h2{
     width: 100%;
     min-width: 200px;
     box-shadow: 5px 5px 15px black;
-    cursor: pointer;
     margin-top: 5%;
     height: auto;  
 }
@@ -390,6 +389,9 @@ h2{
     width: 40px;
     margin: 0 5%;
 }
+.icon-reseau:hover{
+    transform: scale(1.05);
+}
 li{
     list-style: none;
 }
@@ -400,6 +402,7 @@ li{
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    margin-top: 7px;
 }
 .event-txt h3{
     text-align: left;
@@ -467,12 +470,10 @@ li{
         font-size: 2rem;
     }
 }
-@media screen and (min-width:851px){
-    .menu{
-        display:flex;
-    }
-}
 @media screen and (max-width:850px) {
+    .brand{
+        height:40vh;
+    }
     .btn, .btn-event{
         width: 80%;
     }
