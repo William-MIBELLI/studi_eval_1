@@ -14,6 +14,14 @@ a{
 .btn a{
     color: #78e08f;
 }
+h3{
+    color: #eb2f06;
+}
+
+
+/* //////////////  MENU  ////////////////// */
+
+
 .menu{
     width: 100%;
     height: 5vh;
@@ -29,6 +37,9 @@ a{
 }
 .icon-label{
     width: 20px;
+}
+.burger{
+    display: none;
 }
 .nav-item{
     color:white;
@@ -57,6 +68,8 @@ a{
     color: #78e08f;
     
 }
+
+/* ///////////// HEADER /////////////// */
 
 .brand{
     height:60vh;
@@ -90,6 +103,10 @@ h1 a{
 h1 a:hover{
     color: #eb2f06;
 }
+
+
+/* /////////////////////   INDEX ///////////////////// */
+
 .container{
     background: white;
     padding-top: 120px;
@@ -119,31 +136,6 @@ h1 a:hover{
     box-shadow: 5px 5px 15px black;
     transition: all 0.3s ease-in-out;
 }
-/* 
-@keyframes goLeft {
-    from{
-        width: 100%;
-    }
-    to{
-        width:0;
-    }
-}
-@keyframes goRight {
-    from{
-        margin-right: 0;
-    }
-    to{
-        margin-right: 300%;
-    }
-}
-.animateLeft{
-    position:relative;
-    animation: 2s ease-in forwards goLeft;
-}
-.animateRight{
-    position:relative;
-    animation: 2s ease-in forwards  goRight; 
-} */
 .article:hover{
     box-shadow: 5px 5px 25px black;
     transition: all 0.3s ease-in-out;
@@ -189,6 +181,9 @@ h1 a:hover{
     background-size: cover;
     background-position: center;
 }
+
+
+/* /////////////////  CONTACT  //////////////////// */
 
 #contact{
     width:80%;
@@ -236,6 +231,9 @@ h1 a:hover{
 #contact input, textarea, .btn{
     box-shadow: 5px 5px 35px black;;
 }
+
+/* ////////////////////  FOOTER  /////////////////////*/
+
 footer{
     background-color: white;
     padding-top: 2%;
@@ -270,6 +268,9 @@ footer p{
 ul{
     padding-left: 0;
 }
+
+/* ////////////////// GALERIE  ///////////////////// */
+
 .pic-container{
     display: grid;
     grid-template-columns: repeat(3,33%);
@@ -310,11 +311,14 @@ h2{
 .col3{
     grid-column: 3;
 }
+.hide{
+    display: none;
+}
 .pic-item,
 .pic-article{
     position: relative;
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
     box-shadow: 5px 5px 15px black;
     cursor: pointer;
     margin-top: 5%;
@@ -342,36 +346,9 @@ h2{
     width: 100%;
 }
 
-.flip-div{
-    position:relative;
-    width: 33%;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
-}
-.flip-div:hover{
-    transform: rotateY(180deg);
-}
-.front-div{
-    position: absolute;
-    width: 100%;
-    backface-visibility: hidden;
-    background-color: green;
-}
-.back-div{
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    backface-visibility: hidden;
-    background-color: yellow;
-    transform: rotateY(180deg);
-}
 
+/* ////////////////////  CALENDRIER ////////////////////////*/
 
-@media screen and (max-width:1620px){
-    h1{
-        font-size: 7rem;
-    }
-}
 .container-event{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -449,4 +426,127 @@ li{
 }
 .event-txt a{
     width: auto;
+}
+
+/* //////////////// MEDIA QUERIES //////////////////*/
+@media screen and (max-width:1620px) {
+    h1{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .btn{
+        font-size: 1rem;
+    }
+    .btn-event,.btn-pic{
+        width: 40%;
+    }
+    .container, .pic-container{
+        top:-100px;
+        width:90%;
+        padding-top: 60px;
+    }
+}
+@media  screen and (max-width:1020px) {
+    .pic-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .col3{
+        display: none;
+    }
+    .hide{
+        display: block;
+    }
+    .event-txt h3{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:850px) {
+    .btn, .btn-event{
+        width: 80%;
+    }
+    .article{
+        flex-direction: column-reverse;
+    }
+    .art-content{
+        width: 80%;
+        padding: 0;
+        order: 3;
+        margin-bottom: 20px;
+    }
+    .article p{
+        margin:  0 20px ;
+    }
+    .article h3{
+        margin-left: 20px;
+        color: #78e08f;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .burger{
+        display: block;
+        background: transparent;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        z-index: 2000;
+        cursor: pointer;
+    }
+    .burger-icon{
+        width: 60px;
+        border-radius: 50%;
+    }
+}
+@media screen and (max-width:710px){
+    h1{
+        font-size: 5rem;
+    }
+    .container, .pic-container{
+        width: 100%;
+    }
+    .pic-container{
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        padding-right: 0;
+        column-gap: 0;
+    }
+    .container-event{
+        grid-template-columns: 1fr;
+    }
+    .col3{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .col1, .col2, .col3{
+        grid-column: 1;
+    }
+    .hide{
+        display: none;
+    }
+    .container-event .col2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .event-img{
+        margin-top: 50px;
+    }
+
+
+}
+@media  screen and (max-width:610px) {
+    h1{
+        font-size: 3.6rem;
+    }
+}
+@media screen and (max-width:480px){
+    h1,h2{
+        font-size: 2rem;
+    }
 }
