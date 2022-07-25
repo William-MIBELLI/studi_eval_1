@@ -17,6 +17,11 @@ a{
 h3{
     color: #eb2f06;
 }
+strong{
+    color: #1e3799;
+    font-weight: 900;
+    margin: auto;
+}
 
 
 /* //////////////  MENU  ////////////////// */
@@ -24,7 +29,8 @@ h3{
 
 .menu{
     width: 100%;
-    height: 5vh;
+    min-height: 5vh;
+    height:auto;
     background: linear-gradient(rgb(63, 63, 63),black);
     display: flex;
     flex-direction: row;
@@ -185,32 +191,27 @@ h1 a:hover{
 
 /* /////////////////  CONTACT  //////////////////// */
 
-#contact{
+.contact-bg{
+    background-image: url('./ressources/contact_bg.jpg');
+    background-size: cover;
+    background-position: center;
     width:80%;
     padding-top: 30px;
     padding-bottom: 30px;
     margin: auto;
     margin-top: 80px;
-    background-image: url('./ressources/contact_bg.jpg');
-    background-size: cover;
-    background-position: center;
+}
+#contact{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color:#eb2f06;
-    box-shadow: 5px 5px 15px black;
     position: relative;
+    z-index: 1000;
+
 }
-#contact::after{
-    position: absolute;
-    left: 0;
-    top:0;
-    background-color: rgba(0,0,0,0.7);
-}
-#contact:hover{
-    box-shadow: 5px 5px 25px black;
-}
+
 #contact label{
     padding-top: 30px;
     margin-bottom: 20px;
@@ -247,6 +248,7 @@ footer{
 .reseaux img{
     width:40px;
     height: 40px;
+    cursor: pointer;
 }
 .reseaux{
     margin-bottom: 15px;
@@ -258,6 +260,9 @@ footer{
     color:#eb2f06;
     font-size:0.7em;
     font-weight: 100;
+}
+.footer-link li:hover{
+    text-shadow: 5px 5px 15px black;
 }
 footer p{
     text-align: center;
@@ -462,6 +467,11 @@ li{
         font-size: 2rem;
     }
 }
+@media screen and (min-width:851px){
+    .menu{
+        display:flex;
+    }
+}
 @media screen and (max-width:850px) {
     .btn, .btn-event{
         width: 80%;
@@ -485,9 +495,21 @@ li{
     .menu{
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        height:auto;
+        width: 100%;
+        position: sticky;
         left: 0;
+        top: 0;
+        z-index: 1500;
+    }
+    .nav-item{
+        width: 100vw;
+        text-align: center;
+    }
+    .nav-label{
+        display: none;
     }
     .burger{
         display: block;
